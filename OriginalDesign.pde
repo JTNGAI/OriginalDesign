@@ -1,3 +1,6 @@
+int x= ((int)(Math.random()* 5)) ;
+int y= ((int)(Math.random()* 30));
+
 void setup()
 {
 	size(1000,700);
@@ -21,8 +24,11 @@ void draw()
 	rightarm();
 	leftarm();
 	mark1 ();
-//	rightwhiskers();
-	
+	point();
+	mouth();
+	blackball();
+	blackball2();
+
 }
 void stomach()
 {
@@ -95,17 +101,7 @@ void leftarm()
 	fill(69,69,69);
 	arc(400, 410, 170, 235, 3*PI/2, 11*PI/4);
 }
-void rightwhiskers()
-{
-	noFill();
-	beginShape();
-	curveVertex(1000, 1000);
-	curveVertex(1000, 1000);
-	curveVertex(10, 170);
-	curveVertex(10, 170);
-	endShape(CLOSE);
-}
-void mark1 ()
+void mark1()
 {
 	fill(255);
 	arc(250, 360, 73, 41, 5*PI/6, 13*PI/6);
@@ -113,4 +109,47 @@ void mark1 ()
 	arc(350, 360, 73, 41, 5*PI/6, 13*PI/6);
 	arc(310, 430, 80, 43, 5*PI/6, 13*PI/6);
 	arc(190, 430, 80, 43, 5*PI/6, 13*PI/6);
+}
+void point()
+{
+	noFill();
+	line(300, 200, 85, 75);
+}	
+void mouth()
+{
+	fill(205,197,191);	
+	ellipse(270, 260, 10, 7);
+}
+void blackball()
+{
+	noLoop(); //draws screen only once
+	fill(0,0,0); 
+	ellipse(x+100, y+50,90,90);	
+	fill(255);
+	ellipse(x+80 , y+50,30,30);
+	ellipse(x+120 , y+50,30,30);
+	fill(0,0,0);
+	ellipse(x+85 , y+50,15,15);
+	ellipse(x+115 , y+50,15,15);
+
+
+	x= x+ ((int)(Math.random())+x);
+	y= y+ ((int)(Math.random())+y);
+}	
+void blackball2()
+{
+	noLoop(); //draws screen only once
+	fill(0,0,0); 
+	ellipse(x+700, y+50,90,90);	
+	fill(255);
+	ellipse(x+680 , y+50,30,30);
+	ellipse(x+720 , y+50,30,30);
+	fill(0,0,0);
+	ellipse(x+685 , y+50,15,15);
+	ellipse(x+715 , y+50,15,15);
+
+}
+void mousePressed()
+{
+redraw();
 }
