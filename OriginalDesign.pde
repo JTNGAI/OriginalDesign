@@ -18,16 +18,17 @@ void draw()
 	lefteye();
 	rightpupil();
 	leftpuppil();
+	nose();
+	mark1();
+
 	rightfoot();
 	leftfoot();
-	nose();
 	rightarm();
 	leftarm();
-	mark1 ();
 	point();
 	mouth();
 	blackball();
-	blackball2();
+//	blackball2();
 
 }
 void stomach()
@@ -112,8 +113,16 @@ void mark1()
 }
 void point()
 {
-	noFill();
-	line(300, 200, 85, 75);
+	stroke(0,0,0);
+	line(20,215,140,255);
+	line(20,200,140,240);
+	line(20,230,140,270);
+
+	line(330,255,450,212);
+	
+	line(330,240,450,200);
+	
+	line(330,270,450,230);
 }	
 void mouth()
 {
@@ -133,8 +142,8 @@ void blackball()
 	ellipse(x+115 , y+50,15,15);
 
 
-	x= x+ ((int)(Math.random())+x);
-	y= y+ ((int)(Math.random())+y);
+	x= x+ ( (int)(Math.random()*150) );
+	y= y+ ((int)(Math.random()*30) );
 }	
 void blackball2()
 {
