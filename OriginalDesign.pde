@@ -20,7 +20,6 @@ void draw()
 	leftpuppil();
 	nose();
 	mark1();
-
 	rightfoot();
 	leftfoot();
 	rightarm();
@@ -84,6 +83,7 @@ void giantouterbody()
 }
 void rightfoot()
 {
+	stroke(0,0,0);
 	fill(69,69,69);
 	ellipse(140, 600, 120, 150);
 }
@@ -110,6 +110,7 @@ void mark1()
 	arc(350, 360, 73, 41, 5*PI/6, 13*PI/6);
 	arc(310, 430, 80, 43, 5*PI/6, 13*PI/6);
 	arc(190, 430, 80, 43, 5*PI/6, 13*PI/6);
+
 }
 void point()
 {
